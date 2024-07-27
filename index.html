@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Lato", sans-serif;
+        }
+
+        main {
+
+            height: 100vh;
+            width: 100%;
+            background-color: #014179;
+            ;
+
+        }
+
+        nav {
+            min-height: 70px;
+            width: 100%;
+            background-color: rgb(255, 255, 255);
+
+        }
+
+        .logo {
+
+            float: left;
+            padding: 20px;
+            /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+        }
+
+        .left {
+            text-align: right;
+        }
+
+        span {
+            display: none;
+        }
+
+        ul li {
+
+            list-style: none;
+            display: inline-block;
+            padding: 25px 20px;
+            /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+        }
+
+
+        @media only screen and (max-width:540px) {
+
+            span {
+                display: block;
+                text-align: right;
+                padding: 20px;
+                font-size: 22px;
+                cursor: pointer;
+            }
+
+            ul li {
+                display: block;
+            }
+
+            ul {
+                display: none;
+
+            }
+            .left{
+                text-align: left;
+            }
+        }
+    </style>
+
+
+
+
+    <main>
+        <nav>
+
+            <h1 class="logo">Java</h1>
+
+            <span onclick="foo()">&#9776;</span>
+
+            <div class="left">
+
+                <ul id="list">
+
+                    <li>Home</li>
+
+                    <li>About</li>
+
+                    <li>Services</li>
+
+                    <li>Contact </li>
+
+                    <li>Blog</li>
+                </ul>
+
+            </div>
+        </nav>
+    </main>
+
+
+    <script>
+
+        let list = document.getElementById('list');
+
+
+        function foo() {
+
+            if (list.style.display == 'none') {
+
+                list.style.display = 'block'
+
+            } else {
+
+                list.style.display = 'none'
+            }
+        }
+
+    </script>
+</body>
+
+</html>
